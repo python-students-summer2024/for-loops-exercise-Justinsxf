@@ -5,18 +5,19 @@ Feel free to comment/uncomment or otherwise modify any line of code in this file
 """
 
 #### VIRUS TRANSMISSION ####
-# calculate how many people will be infected by a population of 10 infected people over 14 days, assuming a transmission rate of 1.2
+# calculate how many people will be infected by a population of 10 infected people over 14 days, 
+# assuming a transmission rate of 1.2
 from virus_transmission import calculate_infections
 
-starting_infections = 2
-reproduction_rate = 1.1
-num_days = 62
-total_infections = calculate_infections(
-    starting_infections, reproduction_rate, num_days
-)  # calculate total infections
+starting_number_infections = 10
+reproduction_rate = 1.2
+num_days = 14
+
+number_of_infections = calculate_infections(starting_number_infections, reproduction_rate, num_days)  # calculate total infections
+
 print(
     "{} people will go on to create a total of {} infections over {} days, assuming a reproduction rate of {}".format(
-        starting_infections, total_infections, num_days, reproduction_rate
+        starting_number_infections, number_of_infections, num_days, reproduction_rate
     )
 )
 
